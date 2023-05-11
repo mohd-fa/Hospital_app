@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "7900965809",
+    "project_id": "loginhospital-2cc49",
+    "storage_bucket": "loginhospital-2cc49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:7900965809:android:adf4bcc20770e139796b90",
+        "android_client_info": {
+          "package_name": "com.example.doctor_appointment_ui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "7900965809-h5ijulla81n6drkft6v3nu5368rtd2f9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjNX_xFvLuPY497tMipDJvvUBsa6DII5A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "7900965809-h5ijulla81n6drkft6v3nu5368rtd2f9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
