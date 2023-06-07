@@ -324,7 +324,7 @@ class AppointScreen extends StatelessWidget {
                         Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AppointScreen(),
+                    builder: (context) => AppointmentDone(),
                   ));
                       },
                       child: Container(
