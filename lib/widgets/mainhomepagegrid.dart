@@ -2,8 +2,9 @@ import 'package:doctor_appointment_ui/chatbot/chatbot_page.dart';
 import 'package:doctor_appointment_ui/screens/ambulance_call.dart';
 import 'package:doctor_appointment_ui/screens/appoint_screen.dart';
 import 'package:doctor_appointment_ui/screens/home_screen.dart';
-import 'package:doctor_appointment_ui/screens/map_page.dart';
+import 'package:doctor_appointment_ui/screens/hospital_map_page.dart';
 import 'package:doctor_appointment_ui/screens/models/grid.dart';
+import 'package:doctor_appointment_ui/screens/pharm_map_page.dart';
 import 'package:doctor_appointment_ui/screens/profile_page.dart';
 import 'package:doctor_appointment_ui/utils/utils.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ class MainHomePageGrid extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HomeScreen(),
+                    builder: (context) => const MapPage(),
                   ));
             }
 
@@ -32,7 +33,7 @@ class MainHomePageGrid extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const MapPage(),
+                    builder: (context) => const PharmMapPage(),
                   ));
             }
 
