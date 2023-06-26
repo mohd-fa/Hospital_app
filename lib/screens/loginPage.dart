@@ -93,119 +93,121 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(204, 80, 198, 139),
       body: SafeArea(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const SizedBox(height: 50),
-
-              // logo
-              SizedBox(
-                height: 150,
-                child: Image.asset('images/hospital_logo.png'),
-              ),
-
-              const SizedBox(height: 50),
-
-              // welcome back, you've been missed!
-              const Text(
-                'Welcome back you\'ve been missed!',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 62, 62, 62),
-                  fontSize: 16,
+        child: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(height: 50),
+        
+                // logo
+                SizedBox(
+                  height: 150,
+                  child: Image.asset('images/hospital_logo.png'),
                 ),
-              ),
-
-              const SizedBox(height: 20),
-
-              // email textfield
-              MyTextField(
-                controller: emailController,
-                hintText: 'Email',
-                obscureText: false,
-              ),
-
-              const SizedBox(height: 10),
-
-              // password textfield
-              MyTextField(
-                controller: passwordController,
-                hintText: 'Password',
-                obscureText: true,
-              ),
-
-              const SizedBox(height: 10),
-
-              // forgot password?
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: const [
+        
+                const SizedBox(height: 50),
+        
+                // welcome back, you've been missed!
+                const Text(
+                  'Welcome back you\'ve been missed!',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 62, 62, 62),
+                    fontSize: 16,
+                  ),
+                ),
+        
+                const SizedBox(height: 20),
+        
+                // email textfield
+                MyTextField(
+                  controller: emailController,
+                  hintText: 'Email',
+                  obscureText: false,
+                ),
+        
+                const SizedBox(height: 10),
+        
+                // password textfield
+                MyTextField(
+                  controller: passwordController,
+                  hintText: 'Password',
+                  obscureText: true,
+                ),
+        
+                const SizedBox(height: 10),
+        
+                // forgot password?
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: const [
+                      Text(
+                        'Forgot Password?',
+                        style: TextStyle(color: Color.fromARGB(255, 70, 70, 70)),
+                      ),
+                    ],
+                  ),
+                ),
+        
+                const SizedBox(height: 25),
+        
+                // sign in button
+                MyButton(
+                  onTap: signUserIn,
+                ),
+        
+                const SizedBox(height: 50),
+        
+                // or continue with
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    children: const [
+                      Expanded(
+                        child: Divider(thickness: 2, color: Colors.blue),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10.0),
+                        child: Text(
+                          'Or continue with',
+                          style:
+                              TextStyle(color: Color.fromARGB(255, 57, 57, 57)),
+                        ),
+                      ),
+                      Expanded(
+                        child: Divider(
+                          thickness: 2,
+                          color: Colors.blue,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+        
+                const SizedBox(height: 50),
+        
+                // not a member? register now
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
                     Text(
-                      'Forgot Password?',
-                      style: TextStyle(color: Color.fromARGB(255, 70, 70, 70)),
+                      'Not a member?',
+                      style: TextStyle(color: Colors.grey[700]),
                     ),
-                  ],
-                ),
-              ),
-
-              const SizedBox(height: 25),
-
-              // sign in button
-              MyButton(
-                onTap: signUserIn,
-              ),
-
-              const SizedBox(height: 50),
-
-              // or continue with
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Row(
-                  children: const [
-                    Expanded(
-                      child: Divider(thickness: 2, color: Colors.blue),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Text(
-                        'Or continue with',
-                        style:
-                            TextStyle(color: Color.fromARGB(255, 57, 57, 57)),
-                      ),
-                    ),
-                    Expanded(
-                      child: Divider(
-                        thickness: 2,
+                    const SizedBox(width: 4),
+                    const Text(
+                      'Register now',
+                      style: TextStyle(
                         color: Colors.blue,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ],
-                ),
-              ),
-
-              const SizedBox(height: 50),
-
-              // not a member? register now
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Not a member?',
-                    style: TextStyle(color: Colors.grey[700]),
-                  ),
-                  const SizedBox(width: 4),
-                  const Text(
-                    'Register now',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              )
-            ],
+                )
+              ],
+            ),
           ),
         ),
       ),

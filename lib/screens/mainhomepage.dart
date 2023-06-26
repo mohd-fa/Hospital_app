@@ -2,7 +2,6 @@
 
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:doctor_appointment_ui/chatbot/chatbot_page.dart';
-import 'package:doctor_appointment_ui/screens/home_screen.dart';
 import 'package:doctor_appointment_ui/screens/profile_page.dart';
 import 'package:doctor_appointment_ui/utils/utils.dart';
 import 'package:doctor_appointment_ui/widgets/mainhomepagegrid.dart';
@@ -23,6 +22,7 @@ class MainHomePage extends StatelessWidget {
         backgroundColor: const Color.fromRGBO(89, 193, 142, 1),
         color: const Color.fromARGB(224, 0, 128, 255),
         animationCurve: Curves.decelerate,
+        index: 1,
         onTap: (index) {
           if (index == 0) {
             signUserOut();

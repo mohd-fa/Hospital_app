@@ -43,7 +43,7 @@ class _ChatBotPageState extends State<ChatBotPage> {
                 child: Center(
                   child: CircleAvatar(
                     maxRadius: 18,
-                    backgroundImage: AssetImage("images/chatbot.jpg"),
+                    child: Icon(Icons.adb),
                   ),
                 ),
               ),

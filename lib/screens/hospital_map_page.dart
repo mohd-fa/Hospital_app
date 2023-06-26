@@ -6,7 +6,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:geolocator/geolocator.dart';
 
-const google_api_key = 'AIzaSyDWTnHlmKlPY6ZtdDokfH0wSgDOkN9AZA8';
+const google_api_key = 'AIzaSyBslSLIMkVmO4zgH3YQcoEJVo28LuMlq1w';
 
 class Hospital {
   final String name;
