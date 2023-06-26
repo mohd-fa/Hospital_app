@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:doctor_appointment_ui/chatbot/chatbot_page.dart';
 import 'package:doctor_appointment_ui/screens/home_screen.dart';
 import 'package:doctor_appointment_ui/screens/profile_page.dart';
 import 'package:doctor_appointment_ui/utils/utils.dart';
@@ -31,7 +32,7 @@ class MainHomePage extends StatelessWidget {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => HomeScreen(),
+                  builder: (context) => ChatBotPage(),
                 ));
           }
 
