@@ -2,10 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:doctor_appointment_ui/components/my_button.dart';
 import 'package:doctor_appointment_ui/components/my_textfield.dart';
-import 'package:doctor_appointment_ui/components/square_tile.dart';
 
 class LoginPage extends StatefulWidget {
-  LoginPage({super.key});
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -92,7 +91,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(204, 80, 198, 139),
+      backgroundColor: const Color.fromARGB(204, 80, 198, 139),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -101,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 50),
 
               // logo
-              Container(
+              SizedBox(
                 height: 150,
                 child: Image.asset('images/hospital_logo.png'),
               ),
@@ -109,7 +108,7 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 50),
 
               // welcome back, you've been missed!
-              Text(
+              const Text(
                 'Welcome back you\'ve been missed!',
                 style: TextStyle(
                   color: Color.fromARGB(255, 62, 62, 62),
@@ -142,7 +141,7 @@ class _LoginPageState extends State<LoginPage> {
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
+                  children: const [
                     Text(
                       'Forgot Password?',
                       style: TextStyle(color: Color.fromARGB(255, 70, 70, 70)),
@@ -164,12 +163,12 @@ class _LoginPageState extends State<LoginPage> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
-                  children: [
+                  children: const [
                     Expanded(
                       child: Divider(thickness: 2, color: Colors.blue),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      padding: EdgeInsets.symmetric(horizontal: 10.0),
                       child: Text(
                         'Or continue with',
                         style:

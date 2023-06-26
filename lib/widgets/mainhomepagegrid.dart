@@ -1,15 +1,16 @@
+import 'package:doctor_appointment_ui/chatbot/chatbot_page.dart';
 import 'package:doctor_appointment_ui/screens/ambulance_call.dart';
 import 'package:doctor_appointment_ui/screens/appoint_screen.dart';
 import 'package:doctor_appointment_ui/screens/home_screen.dart';
-import 'package:doctor_appointment_ui/screens/loginPage.dart';
+import 'package:doctor_appointment_ui/screens/map_page.dart';
 import 'package:doctor_appointment_ui/screens/models/grid.dart';
 import 'package:doctor_appointment_ui/screens/profile_page.dart';
 import 'package:doctor_appointment_ui/utils/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-import '../screens/models/grid.dart';
 
 class MainHomePageGrid extends StatelessWidget {
+  const MainHomePageGrid({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
@@ -31,7 +32,7 @@ class MainHomePageGrid extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AppointScreen(),
+                    builder: (context) => const MapPage(),
                   ));
             }
 
@@ -39,7 +40,7 @@ class MainHomePageGrid extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Ambulance(),
+                    builder: (context) => const Ambulance(),
                   ));
             }
 
@@ -47,7 +48,7 @@ class MainHomePageGrid extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AppointScreen(),
+                    builder: (context) => const AppointScreen(),
                   ));
             }
 
@@ -55,7 +56,7 @@ class MainHomePageGrid extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ProfileScreen(),
+                    builder: (context) => const ChatBotPage(),
                   ));
             }
 
@@ -63,7 +64,7 @@ class MainHomePageGrid extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ProfileScreen(),
+                    builder: (context) => const ProfileScreen(),
                   ));
             }
           },
@@ -71,9 +72,9 @@ class MainHomePageGrid extends StatelessWidget {
             margin: EdgeInsets.only(
                 top: i.isEven ? 0 : 0, bottom: i.isEven ? 0 : 0),
             decoration: BoxDecoration(
-              color: Color.fromARGB(255, 230, 237, 233),
+              color: const Color.fromARGB(255, 230, 237, 233),
               borderRadius: BorderRadius.circular(20),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Colors.grey,
                   blurRadius: 10,
@@ -85,7 +86,7 @@ class MainHomePageGrid extends StatelessWidget {
                 Image.asset(allGrid.grid[i].path),
                 Text(
                   allGrid.grid[i].title,
-                  style: MainHeading,
+                  style: mainHeading,
                 ),
               ],
             ),
@@ -94,7 +95,7 @@ class MainHomePageGrid extends StatelessWidget {
       ),
       //griddelegates shows how many items u want in a particular row
       gridDelegate:
-          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+          const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
     );
   }
 }

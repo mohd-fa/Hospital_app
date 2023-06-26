@@ -15,7 +15,7 @@ class ProfileScreen extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => MainHomePage(),
+                    builder: (context) => const MainHomePage(),
                   ));
             },
             icon: const Icon(Icons.arrow_back_ios)),
@@ -30,13 +30,13 @@ class ProfileScreen extends StatelessWidget {
               height: 120,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(70),
-                child: Image(
+                child: const Image(
                   image: AssetImage("images/profile1.png"),
                 ),
               ),
             ),
             const SizedBox(height: 10),
-            Text(
+            const Text(
               "User",
               style: TextStyle(
                 fontSize: 22,
@@ -51,7 +51,7 @@ class ProfileScreen extends StatelessWidget {
                 color: Colors.black.withOpacity(0.7),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             ListTile(
@@ -60,14 +60,14 @@ class ProfileScreen extends StatelessWidget {
                 height: 30,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(700),
-                  color: Color.fromARGB(255, 40, 110, 207).withOpacity(0.1),
+                  color: const Color.fromARGB(255, 40, 110, 207).withOpacity(0.1),
                 ),
                 child: const Icon(
                   Icons.settings,
                   color: Color.fromARGB(255, 40, 110, 207),
                 ),
               ),
-              title: Text(
+              title: const Text(
                 "Settings",
                 style: TextStyle(
                   fontSize: 18,

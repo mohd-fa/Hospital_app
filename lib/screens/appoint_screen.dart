@@ -1,21 +1,23 @@
-import 'dart:math';
 
+import 'package:doctor_appointment_ui/screens/appointmentdone.dart';
 import 'package:doctor_appointment_ui/screens/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class AppointScreen extends StatelessWidget {
+  const AppointScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color.fromARGB(255, 228, 228, 228),
+      color: const Color.fromARGB(255, 228, 228, 228),
       child: SingleChildScrollView(
         child: Column(
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height / 2.1,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
                     "images/doctor_icon.jpg",
@@ -44,7 +46,7 @@ class AppointScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(top: 30, left: 10, right: 10),
+                      padding: const EdgeInsets.only(top: 30, left: 10, right: 10),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -53,14 +55,14 @@ class AppointScreen extends StatelessWidget {
                               Navigator.pop(context);
                             },
                             child: Container(
-                              margin: EdgeInsets.fromLTRB(15, 18, 50, 10),
+                              margin: const EdgeInsets.fromLTRB(15, 18, 50, 10),
                               height: 45,
                               width: 45,
                               decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(10),
                               ),
-                              child: Center(
+                              child: const Center(
                                 child: Icon(Icons.arrow_back_rounded,
                                     color: pColor, size: 28),
                               ),
@@ -77,7 +79,7 @@ class AppointScreen extends StatelessWidget {
                         children: [
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
+                            children: const [
                               Text(
                                 "Patients",
                                 style: TextStyle(
@@ -99,7 +101,7 @@ class AppointScreen extends StatelessWidget {
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
+                            children: const [
                               Text(
                                 "Experience",
                                 style: TextStyle(
@@ -121,7 +123,7 @@ class AppointScreen extends StatelessWidget {
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
+                            children: const [
                               Text(
                                 "Rating",
                                 style: TextStyle(
@@ -148,13 +150,13 @@ class AppointScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Dr.Ram",
                     style: TextStyle(
                       fontSize: 18,
@@ -162,11 +164,11 @@ class AppointScreen extends StatelessWidget {
                       color: pColor,
                     ),
                   ),
-                  SizedBox(height: 5),
+                  const SizedBox(height: 5),
                   Row(
                     children: [
-                      Icon(MdiIcons.heartPulse, color: Colors.red, size: 28),
-                      SizedBox(width: 5),
+                      const Icon(MdiIcons.heartPulse, color: Colors.red, size: 28),
+                      const SizedBox(width: 5),
                       Text(
                         "Surgeon",
                         style: TextStyle(
@@ -176,7 +178,7 @@ class AppointScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 14,
                   ),
                   Text(
@@ -188,7 +190,7 @@ class AppointScreen extends StatelessWidget {
                     ),
                     textAlign: TextAlign.justify,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   Text(
@@ -199,10 +201,10 @@ class AppointScreen extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
-                  Container(
+                  SizedBox(
                     height: 70,
                     child: ListView.builder(
                       shrinkWrap: true,
@@ -211,16 +213,16 @@ class AppointScreen extends StatelessWidget {
                       itemBuilder: (context, index) {
                         return InkWell(
                           child: Container(
-                            margin: EdgeInsets.symmetric(
+                            margin: const EdgeInsets.symmetric(
                                 horizontal: 8, vertical: 5),
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 horizontal: 25, vertical: 9),
                             decoration: BoxDecoration(
                               color: index == 1
                                   ? pColor
-                                  : Color.fromARGB(255, 255, 255, 255),
+                                  : const Color.fromARGB(255, 255, 255, 255),
                               borderRadius: BorderRadius.circular(10),
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(
                                   color: sdColor,
                                   blurRadius: 2,
@@ -241,7 +243,7 @@ class AppointScreen extends StatelessWidget {
                                         : bColor.withOpacity(0.6),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
                                 Text(
@@ -261,7 +263,7 @@ class AppointScreen extends StatelessWidget {
                       },
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   Text(
@@ -272,10 +274,10 @@ class AppointScreen extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
-                  Container(
+                  SizedBox(
                     height: 60,
                     child: ListView.builder(
                         shrinkWrap: true,
@@ -283,14 +285,14 @@ class AppointScreen extends StatelessWidget {
                         itemCount: 6,
                         itemBuilder: (context, index) {
                           return Container(
-                            margin: EdgeInsets.symmetric(
+                            margin: const EdgeInsets.symmetric(
                                 horizontal: 8, vertical: 5),
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 vertical: 10, horizontal: 5),
                             decoration: BoxDecoration(
                               color: index == 2 ? pColor : Colors.white,
                               borderRadius: BorderRadius.circular(10),
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(
                                   color: sdColor,
                                   blurRadius: 4,
@@ -313,7 +315,7 @@ class AppointScreen extends StatelessWidget {
                           );
                         }),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Material(
@@ -324,13 +326,13 @@ class AppointScreen extends StatelessWidget {
                         Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AppointmentDone(),
+                    builder: (context) => const AppointmentDone(),
                   ));
                       },
-                      child: Container(
+                      child: SizedBox(
                         height: 60,
                         width: MediaQuery.of(context).size.width,
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             "Book an Appointment",
                             style: TextStyle(

@@ -1,13 +1,13 @@
 import 'package:doctor_appointment_ui/screens/appoint_screen.dart';
 import 'package:doctor_appointment_ui/screens/colors.dart';
-import 'package:doctor_appointment_ui/screens/loginPage.dart';
-import 'package:doctor_appointment_ui/screens/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class DoctorsSection extends StatelessWidget {
+  const DoctorsSection({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 350,
       child: ListView.builder(
         shrinkWrap: true,
@@ -19,11 +19,11 @@ class DoctorsSection extends StatelessWidget {
               Container(
                 height: 295,
                 width: 200,
-                margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(15),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: sdColor,
                       blurRadius: 4,
@@ -41,11 +41,11 @@ class DoctorsSection extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => AppointScreen(),
+                                  builder: (context) => const AppointScreen(),
                                 ));
                           },
                           child: ClipRRect(
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(15),
                               topRight: Radius.circular(15),
                             ),
@@ -59,13 +59,13 @@ class DoctorsSection extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 5),
+                        padding: const EdgeInsets.symmetric(horizontal: 5),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               "Dr.Ram",
                               style: TextStyle(
                                 fontSize: 22,
@@ -80,14 +80,14 @@ class DoctorsSection extends StatelessWidget {
                                 color: bColor.withOpacity(0.6),
                               ),
                             ),
-                            SizedBox(height: 8),
+                            const SizedBox(height: 8),
                             Row(
                               children: [
-                                Icon(
+                                const Icon(
                                   Icons.star,
                                   color: Colors.amber,
                                 ),
-                                SizedBox(width: 5),
+                                const SizedBox(width: 5),
                                 Text(
                                   "4.9",
                                   style: TextStyle(

@@ -1,4 +1,3 @@
-import 'dart:io';
 
 import 'package:doctor_appointment_ui/screens/colors.dart';
 import 'package:doctor_appointment_ui/screens/mainhomepage.dart';
@@ -8,36 +7,38 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class HomeScreen extends StatelessWidget {
-  List catNames = [
+  final List catNames = [
     "Dental",
     "Heart",
     "Eye",
     "Brain",
     "Ear",
   ];
-  List<Icon> catIcons = [
-    Icon(MdiIcons.toothOutline, color: pColor),
-    Icon(
+  final List<Icon> catIcons = [
+    const Icon(MdiIcons.toothOutline, color: pColor),
+    const Icon(
       MdiIcons.heartPlus,
       color: Color(0xff5ac18e),
       size: 30,
     ),
-    Icon(
+    const Icon(
       MdiIcons.eye,
       color: pColor,
       size: 30,
     ),
-    Icon(
+    const Icon(
       MdiIcons.brain,
       color: pColor,
       size: 30,
     ),
-    Icon(
+    const Icon(
       MdiIcons.earHearing,
       color: pColor,
       size: 30,
     ),
   ];
+
+  HomeScreen({super.key});
 
   void signUserOut() {
     FirebaseAuth.instance.signOut();
@@ -46,14 +47,14 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color(0xff5ac18e),
+      color: const Color(0xff5ac18e),
       child: SingleChildScrollView(
         child: Stack(
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height / 1000,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
                       Color(0x665ac18e),
@@ -70,19 +71,19 @@ class HomeScreen extends StatelessWidget {
                   )),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 57),
+              padding: const EdgeInsets.only(top: 57),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            CircleAvatar(
+                            const CircleAvatar(
                               radius: 30,
                               backgroundImage: AssetImage("images/doctor.png"),
                             ),
@@ -91,18 +92,18 @@ class HomeScreen extends StatelessWidget {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => MainHomePage(),
+                                      builder: (context) => const MainHomePage(),
                                     ));
                               },
-                              icon: Icon(Icons.logout),
-                              color: Color.fromARGB(255, 255, 255, 255),
+                              icon: const Icon(Icons.logout),
+                              color: const Color.fromARGB(255, 255, 255, 255),
                               iconSize: 30,
                               splashRadius: 50,
                             )
                           ],
                         ),
-                        SizedBox(height: 15),
-                        Text(
+                        const SizedBox(height: 15),
+                        const Text(
                           "Hi,User",
                           style: TextStyle(
                             color: wColor,
@@ -110,8 +111,8 @@ class HomeScreen extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        SizedBox(height: 10),
-                        Text(
+                        const SizedBox(height: 10),
+                        const Text(
                           "Your Health is our\nFirst Priority!",
                           style: TextStyle(
                             color: wColor,
@@ -120,14 +121,14 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.only(top: 15, bottom: 20),
+                          margin: const EdgeInsets.only(top: 15, bottom: 20),
                           width: MediaQuery.of(context).size.width,
                           height: 55,
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                               color: wColor,
                               borderRadius: BorderRadius.circular(10),
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(
                                   color: sdColor,
                                   blurRadius: 6,
@@ -141,7 +142,7 @@ class HomeScreen extends StatelessWidget {
                                 hintStyle: TextStyle(
                                   color: Colors.black.withOpacity(0.5),
                                 ),
-                                prefixIcon: Icon(
+                                prefixIcon: const Icon(
                                   Icons.search,
                                   size: 25,
                                 )),
@@ -151,7 +152,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 15),
+                    padding: const EdgeInsets.only(left: 15),
                     child: Text(
                       "Categories",
                       style: TextStyle(
@@ -161,8 +162,8 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 15),
-                  Container(
+                  const SizedBox(height: 15),
+                  SizedBox(
                     height: 100,
                     child: ListView.builder(
                         shrinkWrap: true,
@@ -172,11 +173,11 @@ class HomeScreen extends StatelessWidget {
                           return Column(
                             children: [
                               Container(
-                                margin: EdgeInsets.symmetric(
+                                margin: const EdgeInsets.symmetric(
                                     vertical: 5, horizontal: 15),
                                 height: 60,
                                 width: 60,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Colors.white,
                                   shape: BoxShape.circle,
                                   boxShadow: [
@@ -191,7 +192,7 @@ class HomeScreen extends StatelessWidget {
                                   child: catIcons[index],
                                 ),
                               ),
-                              SizedBox(height: 10),
+                              const SizedBox(height: 10),
                               Text(
                                 catNames[index],
                                 style: TextStyle(
@@ -204,9 +205,9 @@ class HomeScreen extends StatelessWidget {
                           );
                         }),
                   ),
-                  SizedBox(height: 30),
+                  const SizedBox(height: 30),
                   Padding(
-                    padding: EdgeInsets.only(left: 15),
+                    padding: const EdgeInsets.only(left: 15),
                     child: Text(
                       "Recommended Doctors",
                       style: TextStyle(
@@ -216,7 +217,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  DoctorsSection(),
+                  const DoctorsSection(),
                 ],
               ),
             )

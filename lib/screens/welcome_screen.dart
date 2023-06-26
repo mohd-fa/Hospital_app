@@ -3,14 +3,16 @@ import 'package:doctor_appointment_ui/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Material(
       child: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.all(20),
-        decoration: BoxDecoration(
+        padding: const EdgeInsets.all(20),
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
               Color(0x665ac18e),
@@ -25,11 +27,11 @@ class WelcomeScreen extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.fromLTRB(20, 120, 20, 0),
+              padding: const EdgeInsets.fromLTRB(20, 120, 20, 0),
               child: Image.asset("images/doctor.png"),
             ),
-            SizedBox(height: 50),
-            Text(
+            const SizedBox(height: 50),
+            const Text(
               "Doctors Online",
               style: TextStyle(
                 color: Colors.white,
@@ -39,8 +41,8 @@ class WelcomeScreen extends StatelessWidget {
                 wordSpacing: 2,
               ),
             ),
-            SizedBox(height: 10),
-            Text(
+            const SizedBox(height: 10),
+            const Text(
               "Appoint your Doctor",
               style: TextStyle(
                 color: Colors.white,
@@ -48,7 +50,7 @@ class WelcomeScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 70),
+            const SizedBox(height: 70),
             Material(
               color: wColor,
               borderRadius: BorderRadius.circular(10),
@@ -58,8 +60,8 @@ class WelcomeScreen extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => HomeScreen()));
                 },
                 child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 15, horizontal: 40),
-                  child: Text(
+                  padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 40),
+                  child: const Text(
                     "Let's go",
                     style: TextStyle(
                       color: Color(0xff5ac18e),
