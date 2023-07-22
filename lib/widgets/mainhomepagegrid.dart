@@ -1,7 +1,6 @@
 import 'package:doctor_appointment_ui/chatbot/chatbot_page.dart';
 import 'package:doctor_appointment_ui/screens/ambulance_call.dart';
 import 'package:doctor_appointment_ui/screens/appoint_screen.dart';
-import 'package:doctor_appointment_ui/screens/home_screen.dart';
 import 'package:doctor_appointment_ui/screens/hospital_map_page.dart';
 import 'package:doctor_appointment_ui/screens/models/grid.dart';
 import 'package:doctor_appointment_ui/screens/pharm_map_page.dart';

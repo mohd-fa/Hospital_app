@@ -6,7 +6,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:geolocator/geolocator.dart';
 
-const google_api_key = 'AIzaSyBslSLIMkVmO4zgH3YQcoEJVo28LuMlq1w';
+const googleApiKey = 'AIzaSyBslSLIMkVmO4zgH3YQcoEJVo28LuMlq1w';
 
 class Pharmacy {
   final String name;
@@ -248,7 +248,7 @@ class _PharmMapPageState extends State<PharmMapPage> {
       
   }
   Future<List<Pharmacy>> _getNearbyPharmacys() async {
-    const apiKey = google_api_key;
+    const apiKey = googleApiKey;
 
     // final position = await Geolocator.getCurrentPosition(
     //   desiredAccuracy: LocationAccuracy.high,
@@ -334,7 +334,7 @@ class _PharmMapPageState extends State<PharmMapPage> {
     PolylinePoints polylinePoints = PolylinePoints();
 
     PolylineResult result = await polylinePoints.getRouteBetweenCoordinates(
-      google_api_key, 
+      googleApiKey, 
       PointLatLng(_currentPosition.latitude, _currentPosition.longitude), 
       PointLatLng(destination.latitude, destination.longitude)
     );

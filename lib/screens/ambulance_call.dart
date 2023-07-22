@@ -9,8 +9,9 @@ class Ambulance extends StatelessWidget {
     return Scaffold(
       body: Center(
           child: ElevatedButton(
+            style: const ButtonStyle(fixedSize: MaterialStatePropertyAll(Size(100, 50))),
         onPressed: () {
-          FlutterPhoneDirectCaller.callNumber('+918590563160');
+          FlutterPhoneDirectCaller.callNumber('+919497495050');
         },
         child: const Text('call'),
       )),
